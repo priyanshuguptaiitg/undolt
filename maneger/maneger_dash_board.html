@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UnDolt, Maneger dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../assert/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="maneger_assert/css/maneger_index.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../js_for_table/table.css" />
+  </head>
+  <body>
+    <div class="bd-grid">
+      <div class="dashboard_all">
+        <div class="dashboard_nav" id="dashboard_nav">
+          <div class="all_nav">
+            <div class="nav_logo_div">
+              <div>
+                <a href="#" class="nav__logo"
+                  ><span>U</span>n<span>D</span>olt<b>.</b></a
+                >
+              </div>
+              <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu" id="nav_toggle_set"></i>
+              </div>
+            </div>
+            <div class="nav_rest" id="nav_rest">
+              <div class="up_nav" id="up_nav">
+                <div class="up_nav_link" onclick="active_home();">
+                  <i class="bx bx-home"></i><a>Approval</a>
+                </div>
+                <div class="up_nav_link" onclick="active_profile();">
+                  <i class="bx bx-user-circle"></i><a>Profile</a>
+                </div>
+                <div class="up_nav_link" onclick="active_your_tasks();">
+                  <i class="bx bx-task"></i><a>Search</a>
+                </div>
+                <div class="up_nav_link" onclick="active_instraction();">
+                  <i class="bx bx-error-alt"></i><a>Instractions</a>
+                </div>
+              </div>
+              <div class="below_nav" id="low_nav">
+                <div class="log_out_btn" onclick="log_out_fn();">
+                  <i class="bx bx-log-out-circle"></i> Log Out
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard_content">
+          <div class="stud_sub_con std_home" id="std_home">
+            <div>
+              <!--this is for home details-->
+              <h2>Students Task</h2>
+              <div class="container">
+                <table id="table_id_3">
+                  <thead>
+                    <tr>
+                      <th>Task Id</th>
+                      <th>Student Id</th>
+                      <th>Subject</th>
+                      <th>details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>AB1234</td>
+                      <td>AS1234</td>
+                      <td>Maths</td>
+                      <td><button>Details</button></td>
+                    </tr>
+                      <td>AB1934</td>
+                      <td>1400</td>
+                      <td>Physics</td>
+                      <td><button>Details</button></td>
+                    </tr>
+                    <tr>
+                      <td>AB0234</td>
+                      <td>AS2345</td>
+                      <td>Maths</td>
+                      <td><button>Details</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <!--this is for home details-->
+              <h2> Tutor Submision</h2>
+              <div class="container">
+                <table id="table_id_4">
+                  <thead>
+                    <tr>
+                      <th>Task Id</th>
+                      <th>Tutor Id</th>
+                      <th>Subject</th>
+                      <th>details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>AB1234</td>
+                      <td>AS1234</td>
+                      <td>Maths</td>
+                      <td><button>Details</button></td>
+                    </tr>
+                      <td>AB0234</td>
+                      <td>AS2345</td>
+                      <td>Maths</td>
+                      <td><button>Details</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <!--this is for home details-->
+              <h2>New Tutor</h2>
+              <div class="container">
+                <table id="table_id_5">
+                  <thead>
+                    <tr>
+                      <th>Tutor Id</th>
+                      <th>Name</th>
+                      <th>Contact</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>AB1234</td>
+                      <td>Abhijit Gayen</td>
+                      <td>
+                        <div class="contact">
+                          <a href="tel:919898989898">
+                            <div class='tooltip'>
+                              <i class='bx bxs-phone-call'></i>
+                              <span class="tooltip-text">
+                                +919898989898
+                              </span>
+                            </div>
+                          </a>
+                          <a href="mailto: abhijitgayen@gmail.com">
+                            <div class="tooltip">
+                               <i class='bx bxs-envelope'></i>
+                              <span class="tooltip-text">
+                                abhijitgayen@gmail.com
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <form class="subject_input">
+                            <input type="text"  value=" maths, Physics, chemistry, CS, Data Sci."  />
+                            <button type="submit" class="add_tutor">Approve</button>
+                            <button type="reset" class="cancel_tutor">Reject</button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>AB1934</td>
+                      <td>Rahul Sen</td>
+                      <td>
+                        <div class="contact">
+                          <a href="tel:917044136740">
+                            <div class='tooltip'>
+                              <i class='bx bxs-phone-call'></i>
+                              <span class="tooltip-text">
+                                +917044136740
+                              </span>
+                            </div>
+                          </a>
+                          <a href="mailto:rahulsen546@gmail.com">
+                            <div class="tooltip">
+                               <i class='bx bxs-envelope'></i>
+                              <span class="tooltip-text">
+                                rahulsen546@gmail.com
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <form class="subject_input">
+                            <input type="text"  value=" maths, Physics, chemistry, CS, Data Sci."  />
+                            <button type="submit" class="add_tutor">Approve</button>
+                            <button type="reset" class="cancel_tutor">Reject</button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>AB0234</td>
+                      <td>Rahul Dey</td>
+                      <td> 
+                        <div class="contact">
+                          <a href="tel:917044136740">
+                            <div class='tooltip'>
+                              <i class='bx bxs-phone-call'></i>
+                              <span class="tooltip-text">
+                                +917044136780
+                              </span>
+                            </div>
+                          </a>
+                          <a href="mailto:rahuldaye345@gmail.com">
+                            <div class="tooltip">
+                               <i class='bx bxs-envelope'></i>
+                              <span class="tooltip-text">
+                                rahuldaye345@gmail.com
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <form class="subject_input">
+                            <input type="text"  value=" maths, Physics, chemistry, CS, Data Sci."  />
+                            <button type="submit" class="add_tutor">Approve</button>
+                            <button type="reset" class="cancel_tutor">Reject</button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <br />
+          </div>
+          <div class="stud_sub_con std_profile" id="std_profile" hidden>
+            <form method="get">
+              <div class="std_profile_div">
+                <div class="prof_pic_div">
+                  <div class="prof_pic"><i class="bx bxs-user"></i></div>
+                </div>
+                <div class="prof_details">
+                  <div class="cl_id sub_details">
+                    <div>Maneger ID .</div>
+                    <div class="main_details">
+                      <input
+                        type="text"
+                        name="client_id"
+                        value="1001"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="prof_name sub_details">
+                    <div>Full Name .</div>
+                    <div class="main_details">
+                      <input type="text" name="f_name" value="Abhijit Gayen" />
+                      <i class="bx bxs-edit"></i>
+                    </div>
+                  </div>
+                  <div class="prof_name sub_details">
+                    <div>Email Id .</div>
+                    <div class="main_details">
+                      <input
+                        type="text"
+                        name="Email_id"
+                        value="agayen04@gmail.com"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="std_contact_no sub_details">
+                    <div>WhatsApp<span class="note_red">*</span>.</div>
+                    <div class="main_details">
+                      <input type="tel" name="ph_no" value="917044136740" />
+                      <i class="bx bxs-edit"></i>
+                    </div>
+                  </div>
+                  <div class="upi_id sub_details">
+                    <div>UPI Id</div>
+                    <div class="main_details">
+                      <input type="text" value="8630703772@ybi" />
+                      <i class="bx bxs-edit"></i>
+                    </div>
+                  </div>
+                  <div class="bank_account sub_details">
+                    <div>Bank Acc No.</div>
+                    <div class="main_details">
+                      <input type="number" value="12345678910" />
+                      <i class="bx bxs-edit"> </i>
+                    </div>
+                  </div>
+                  <div class="ifsc_code sub_details">
+                    <div>IFSC Code .</div>
+                    <div class="main_details">
+                      <input type="text" value="SBIN0001234" />
+                      <i class="bx bxs-edit"></i>
+                    </div>
+                  </div>
+                  <div class="acc_holder sub_details">
+                    <div>Acc Holder .</div>
+                    <div class="main_details">
+                      <input type="text" value="Priyanshu Gupta" />
+                      <i class="bx bxs-edit"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="note_red">*</span> Please enter WhatApps no
+                    with country code.
+                  </div>
+                  <div class="profile_btns">
+                    <div>
+                      <button class="btn btn_cancel">Cancel</button>
+                    </div>
+                    <div>
+                      <button class="btn btn_save" type="submit">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="stud_sub_con std_your_tasks" id="std_your_tasks" hidden>
+            <h2> Students</h2>
+            <div class="container">
+              <table id="table_id_1">
+                <thead>
+                  <tr>
+                    <th>Student ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Contact No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AB1234</td>
+                    <td>
+                      <div>
+                        <a href="mailto: abhijitgayen@gmail.com">
+                            <div class="tooltip">
+                               <i class='bx bxs-envelope'></i>
+                              <span class="tooltip-text">
+                                abhijitgayen@gmail.com
+                              </span>
+                            </div>
+                          </a>
+                      </div>
+                    </td>
+                    <td>Rahul Halder</td>
+                    <td>919128374667</td>
+                  </tr>
+                  <tr>
+                    <td>AB0234</td>
+                    <td>
+                      <div>
+                        <a href="mailto: abhijitgayen@gmail.com">
+                          <div class="tooltip">
+                             <i class='bx bxs-envelope'></i>
+                            <span class="tooltip-text">
+                              abhijitgayen@gmail.com
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </td>
+                    <td>Rahul Sen</td>
+                    <td>919382716429</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <hr />
+            <h2>Tutors</h2>
+            <div class="container">
+              <table id="table_id_2">
+                <thead>
+                  <tr>
+                    <th>Tutor Id</th>
+                    <th>Name</th>
+                    <th>Subjects</th>
+                    <th>details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AB1234</td>
+                    <td>Abhijit Gayen</td>
+                    <td>Maths, CS, Data Sc.</td>
+                    <td><button>Details</button></td>
+                  </tr>
+                  <tr>
+                    <td>AB1934</td>
+                    <td>Abhijeet Halder</td>
+                    <td>Physics, chemistry</td>
+                    <td><button>Details</button></td>
+                  </tr> 
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <hr />
+            <h2>Tasks</h2>
+            <div class="container">
+              <table id="table_id_6">
+                <thead>
+                  <tr>
+                    <th>Task Id</th>
+                    <th>Std Id</th>
+                    <th>Tut Id</th>
+                    <th>Status</th>
+                    <th>details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AB1234</td>
+                    <td>ST1234</td>
+                    <td>TU3454</td>
+                    <td>Pending</td>
+                    <td><button>Details</button></td>
+                  </tr>
+                  <tr>
+                    <td>AB1234</td>
+                    <td>ST1234</td>
+                    <td>TU3456</td>
+                    <td>Pending</td>
+                    <td><button>Details</button></td>
+                  </tr> 
+                  <tr>
+                    <td>AB1034</td>
+                    <td>ST7875</td>
+                    <td>TU8967</td>
+                    <td>Done</td>
+                    <td><button>Details</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <hr />
+            <h2>Managers</h2>
+            <div class="container">
+              <table id="table_id_7">
+                <thead>
+                  <tr>
+                    <th>Man Id</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Conatct No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MG1234</td>
+                    <td>
+                      <div>
+                        <a href="mailto: abhijitgayen@gmail.com">
+                          <div class="tooltip">
+                             <i class='bx bxs-envelope'></i>
+                            <span class="tooltip-text">
+                              abhijitgayen@gmail.com
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </td>
+                    <td>Priyanshu Gupta</td>
+                    <td>9134567890</td>
+                  </tr>
+                  <tr>
+                    <td>MG3234</td>
+                    <td>
+                      <div>
+                        <a href="mailto: abhijitgayen@gmail.com">
+                          <div class="tooltip">
+                             <i class='bx bxs-envelope'></i>
+                            <span class="tooltip-text">
+                              abhijitgayen@gmail.com
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </td>
+                    <td>Priyanshu Sen</td>
+                    <td>9124356778</td>
+                  </tr> 
+                  <tr>
+                    <td>MG1034</td>
+                    <td>
+                      <div>
+                        <a href="mailto: abhijitgayen@gmail.com">
+                          <div class="tooltip">
+                             <i class='bx bxs-envelope'></i>
+                            <span class="tooltip-text">
+                              abhijitgayen@gmail.com
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </td>
+                    <td>Abhishek</td>
+                    <td>9123435667</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stud_sub_con std_instraction" id="std_instraction" hidden>
+            <h1>Instractions</h1>
+            <ul>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+              <li>
+                it is a content for check . we will see it is done by me. Hello
+                it is not for me see tthat is not ok for me see this is ok or
+                not by the way that is not eaning less.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- script for <table></table> -->
+  <script
+    type="text/javascript"
+    charset="utf8"
+    src="../js_for_table/jQuery.js"
+  ></script>
+  <script
+    type="text/javascript"
+    charset="utf8"
+    src="../js_for_table/jQuery_dataTable.js"
+  ></script>
+  <script>
+    $(function () {
+      $("#table_id_1").dataTable();
+      $("#table_id_2").dataTable();
+      $("#table_id_3").dataTable();
+      $("#table_id_4").dataTable();
+      $("#table_id_5").dataTable();
+      $("#table_id_6").dataTable();
+      $("#table_id_7").dataTable();
+
+    });
+  </script>
+
+  <!-- script for others  -->
+  <script type="text/javascript">
+    let for_home = document.getElementById("std_home");
+    let for_profile = document.getElementById("std_profile");
+    let for_your_tasks = document.getElementById("std_your_tasks");
+    let for_instraction = document.getElementById("std_instraction");
+    function active_profile() {
+      for_home.style.display = "none";
+      for_profile.style.display = "block";
+      for_instraction.style.display = "none";
+      for_your_tasks.style.display = "none";
+    }
+    function active_instraction() {
+      for_home.style.display = "none";
+      for_profile.style.display = "none";
+      for_instraction.style.display = "block";
+      for_your_tasks.style.display = "none";
+    }
+    function active_your_tasks() {
+      for_home.style.display = "none";
+      for_profile.style.display = "none";
+      for_instraction.style.display = "none";
+      for_your_tasks.style.display = "block";
+    }
+    function active_home() {
+      for_home.style.display = "block";
+      for_profile.style.display = "none";
+      for_instraction.style.display = "none";
+      for_your_tasks.style.display = "none";
+    }
+    function other_sub(elem) {
+      console.log(elem.selectedIndex);
+      if (elem.selectedIndex == 6) {
+        document.getElementById("div_other").style.display = "block";
+        document.getElementById("sub_name").style.display = "none";
+      } else {
+        document.getElementById("div_other").style.display = "none";
+      }
+    }
+    //handing the nav bar
+    const showMenu = (toggleId, navId) => {
+      const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("show");
+        });
+      }
+    };
+    showMenu("nav-toggle", "nav_rest");
+    /*===== ACTIVE AND REMOVE MENU =====*/
+    const navLink = document.querySelectorAll(".up_nav_link");
+
+    function linkAction() {
+      /*Remove menu mobile*/
+      const navMenu = document.getElementById("nav_rest");
+      navMenu.classList.remove("show");
+    }
+    navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+    function log_out_fn() {
+      window.location.href = "../log_in.html";
+    }
+  </script>
+</html>

@@ -1,0 +1,273 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.bd-grid{
+  max-width: 1624px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  /*width: calc(100% - 2rem);*/
+  margin: auto;
+}
+.nav__logo{
+  font-size: 25px;
+  color: var(--second-color);
+  text-decoration: none;
+}
+.nav__logo span{
+  color: white;
+  background-color: var(--nav-color);
+  padding: 2px 2px 0px 2px;
+  border-radius: 50px 50px 0px 0px;
+}
+.nav__logo b{
+  color: var(--first-color);
+  padding-left: 3px;
+  font-size: var(--);
+}
+.dashboard_all{
+  width: 100%;
+}
+.dashboard_nav{
+  position:fixed;
+  background-color: white;
+  height: 100vh;
+  z-index: 500;
+  width: var(--dashbord-nav-len);
+  display: flex;
+}
+.all_nav{
+  display: flex;
+  justify-content:space-between;
+  flex-direction: column;
+  height: 80%;
+}
+.stud_sub_con{
+  padding: 27px;
+  height: auto;
+}
+
+.up_nav a{
+  color: var(--nav-color);
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+.up_nav_link{
+  margin-top: 10px;
+}
+.up_nav_link i{
+  color: gray;
+  padding: 2px;
+  font-size: 20px;
+}
+.log_out_btn{
+  border-radius: 5px;
+  border: 1px solid var(--nav-color);
+  width: 85px;
+  padding: 5px;
+  color: var(--nav-color);
+  font-weight: bold;
+}
+.log_out_btn i{
+   font-weight: bold;
+}
+.log_out_btn:hover{
+  background-color: var(--nav-color);
+  color: white;
+}
+/*Desing for short windows */
+@media screen and (max-width: 900px){
+  .dashboard_all{
+    width: 100%;
+  }
+
+  .dashboard_content{
+    width: 100%;
+    margin: 0px;
+  }
+  .dashboard_nav{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+  .nav_logo_div{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 25px ;
+  }
+  .nav__toggle .bx-menu{
+    font-size: 30px;
+  }
+  .all_nav{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav_rest{
+    position: fixed;
+    top: var(--header-height);
+    top: -100%;
+    width: 100%;
+    background-color: #fff;
+    transition: .7s;
+    z-index: -1000;
+  }
+  .up_nav{
+   display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto; 
+  }
+  .below_nav{
+    width: 110px;
+    margin:15px auto;
+  }
+}
+
+.show{
+  top: 59px;
+}
+.dashboard_content{
+  margin: 0px;
+  width: 100%;
+}
+@media  screen and (min-width: 900px){
+  .dashboard_nav{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 12px black;
+  }
+  .dashboard_content{
+    margin-left: var(--dashbord-nav-len);
+    width: calc(100% - var(--dashbord-nav-len));
+  }
+  .nav__toggle{
+    display: none;
+  }
+  .nav_rest{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+/*Home pages*/
+/*For file upload*/
+ 
+.std_home{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   /* background-color: red; */
+}
+.std_home .contact{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.std_home .contact .bx{
+  font-size: 20px;
+}
+.subject_input .bx{
+  font-size: 14px;
+  font-weight: bolder;
+}
+.subject_input{
+  display: flex;
+  flex-direction: column;
+}
+.subject_input button{
+  border:none;
+  outline: none;
+  
+}
+.subject_input .add_tutor{
+  padding: 2px 10px;
+  background-color: green;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+.subject_input .cancel_tutor{
+  padding: 2px 10px;
+  background-color: red;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+
+ 
+
+
+@media screen and (max-width: 520px){
+  .sub_type{
+    width: 90%;
+  }
+  .upload_from{
+    width: 90%;
+  }
+  #file_for_upload{
+    width: 92%;
+  }
+}
+
+.admin_home .container{
+  overflow: auto;
+}
+
+.search_all .container {
+    overflow: auto;
+}
+.block_all .container{
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px){
+  .bd-grid{
+    width: 100%;
+  }
+  .div_stat{
+    width: 80px;
+    height: 80px;
+  }
+  .stat_no{
+  font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .std_profile_div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 25px 0px;
+  }
+  .prof_pic_div{
+    padding: 15px 0px;
+  }
+  .prof_details{
+    width: 90%;
+  }
+  .main_details{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 900px){
+  .stud_sub_con{
+    margin-top:10vh ;
+  }
+}

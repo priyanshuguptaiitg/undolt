@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="undolt assigment solver" />
+  <link rel="stylesheet" type="text/css" href="assert/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assert/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assert/boxicons-2.1.2/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Undolt , the Assigment Solver</title>
+</head>
+
+<body onload="onload_ch();">
+  <div id="loder_set">
+    <div id="loder">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div class="nav_logo_div">
+        <a href="#home" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__list">
+          <div class="nav__item">
+            <a href="#study" class="nav__link">Study</a>
+          </div>
+          <div class="nav__item">
+            <a href="#resources" class="nav__link">Resources</a>
+          </div>
+          <div class="nav__item">
+            <a href="#careers" class="nav__link">Careers</a>
+          </div>
+          <div class="nav__item">
+            <a href="#need_help" class="nav__link">Need help</a>
+          </div>
+          <div class="nav__item">
+            <a href="log_in.html" class="nav__log_in">log In <i class="bx bx-log-in-circle"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-menu" id="nav_toggle_set"></i>
+      </div>
+    </nav>
+  </header>
+  <section class="home__all section__all bd-grid" id="home">
+    <div class="home_setup">
+      <div class="home_content">
+        <div class="home_up_content">
+          We are ready 24X7 for helping.
+        </div>
+        <div class="main_home_content">
+          An Investment of Your time, never goes to waste.
+        </div>
+        <div class="home_upload">
+          Get Online Assignment Help Instantly. Try It Now!
+          <form class="upload_from_home">
+            <div class="file_upload">
+              <textarea id="question_text" rows="4" cols="40"></textarea>
+              <label for="upload_file" class="upload_file">
+                <div>
+                  <img src="assert/img/file.svg" />
+                </div>
+                <div>
+                  Upload
+                </div>
+              </label>
+              <input type="file" id="upload_file" name="upload_file" onchange="loadFile(event)"
+                accept="image/png, image/jpeg" multiple />
+            </div>
+            <div style="width: 50px; height: 50px; overflow: hidden;">
+              <img id="output" style="width: 50px;" />
+            </div>
+
+            <div class="sub_deadline">
+              <div class="select_subject">
+                <div>
+                  <label for="subject">Select Subject</label>
+                </div>
+                <div>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="select_deadline">
+                <div>
+                  <label for="deadline">Set Deadline</label>
+                </div>
+                <div>
+                  <input type="datetime-local" min="2022-06-07T00:00" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <input type="submit" class="submit_btn" value="Submit">
+              <input type="reset" class="submit_btn" value="Reset">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="home_img">
+        <div class="home_ball_1"></div>
+
+        <img src="assert/img/homepage.svg" alt="Home Page image" />
+      </div>
+
+    </div>
+
+  </section>
+  <section class="study__all section__all" id="study">
+    <h1>
+      Study
+    </h1>
+  </section>
+  <section class="resources__all section__all" id="resources">
+    <h1>Resources</h1>
+  </section>
+  <section class="careers__all section__all" id="careers">
+    <h1>Careers</h1>
+  </section>
+  <section class="need_help__all section__all" id="need_help">
+    <h1>Need help</h1>
+    <div class="body">
+      <div class="student_stories">Student Stories</div>
+      <input type="radio" name="position" checked/>
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+
+      <main id="carousel">
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_4.webp" alt="tutor_4" />
+            <div class="carousel_user_name">
+              <div>
+                Riya Sing
+              </div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem id similique ducimus corrupti ut
+            natus, doloribus dolore quod voluptatibus!
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_3.webp" alt="tutor_3" />
+            <div class="carousel_user_name">
+              <div>Rahul Sing</div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis Lorem, ipsum dolor.
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_2.webp" alt="tutor_3" />
+            <div class="carousel_user_name">
+              <div>Sushil Gupta</div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star last-star"></span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pti ut natus, doloribus dolore quod
+            voluptatibus!
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_1.webp" alt="tutor_3" />
+            <div class="carousel_user_name">
+              <div>
+                Probal Sen
+              </div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem id similique ducimus corrupti ut
+            natus, doloribus dolore quod voluptatibus!
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_4.webp" alt="tutor_3" />
+            <div class="carousel_user_name">
+              <div>
+                Jetu Das
+              </div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem id similique ducimus corrupti ut
+            natus,
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="assert/img/tutor_image/tutor_4.webp" alt="tutor_3" />
+            <div class="carousel_user_name">
+              <div>
+                Dekhshi Sunder Basu
+              </div>
+              <div class="user_star">
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem id similique ducimus corrupti ut
+            natus, doloribus dolore quod voluptatibus!
+          </div>
+        </div>
+      <main>
+    </div>
+  </section>
+  <footer class="footer__all">
+    <div class="bd-grid">
+      <div class="footer_logo_div">
+        <a href="#" class="footer__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+        <div class="social_icon_footer">
+          <div class="social_icon">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+          </div>
+          <div class="social_icon">
+            <a href="#"><i class="bx bxl-whatsapp"></i></a>
+          </div>
+          <div class="social_icon">
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+          <div class="social_icon">
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+          </div>
+          <div class="social_icon">
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__con">
+        <div class="footer__service footer_subpart">
+          <h4 class="footer_subpart_heading">Service</h4>
+          <ul>
+            <li><a href="#" class="footer__link">Live Sessions</a></li>
+            <li><a href="#" class="footer__link">Video Solution</a></li>
+            <li><a href="#" class="footer__link">Assigment help</a></li>
+            <li>
+              <a href="#" class="footer__link">Online Lab Report Help</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Pay Someone to Solve your Homework</a>
+            </li>
+            <li><a href="#" class="footer__link">Math Problem Solver</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__subject footer_subpart">
+          <h4 class="footer_subpart_heading">Subjects</h4>
+          <ul>
+            <li><a href="#" class="footer__link">Mathematics</a></li>
+            <li><a href="#" class="footer__link">Data Science</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__feature footer_subpart">
+          <h4 class="footer_subpart_heading">Features</h4>
+          <ul>
+            <li><a href="#" class="footer__link">Top Expert</a></li>
+            <li>
+              <a href="#" class="footer__link">Plagiarism Free Solution</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">100% cureect Solution</a>
+            </li>
+            <li><a href="#" class="footer__link">24/7 Availability</a></li>
+            <li><a href="#" class="footer__link">Cost Effective</a></li>
+            <li><a href="#" class="footer__link">blank...</a></li>
+            <li><a href="#" class="footer__link">blank...</a></li>
+            <li><a href="#" class="footer__link">blank...</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_about footer_subpart">
+          <h4 class="footer_subpart_heading">About</h4>
+          <ul>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">FAQs</a></li>
+            <li><a href="#" class="footer__link">Refund Policy</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+            <li><a href="#" class="footer__link">Blank...</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__reserved">
+        &copy 2022 UnDolt. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript">
+  var loadFile = function (event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+  async function onload_ch() {
+    await sleep(500);
+    //alert('your page is loaded');
+    document.getElementById("loder_set").style.display = "none";
+  }
+  /*===== MENU SHOW =====*/
+  const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    }
+  };
+  showMenu("nav-toggle", "nav-menu");
+
+  /*===== ACTIVE AND REMOVE MENU =====*/
+  const navLink = document.querySelectorAll(".nav__link");
+
+  function linkAction() {
+    /*Active link*/
+    navLink.forEach((n) => n.classList.remove("active"));
+    this.classList.add("active");
+
+    /*Remove menu mobile*/
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.remove("show");
+  }
+  navLink.forEach((n) => n.addEventListener("click", linkAction));
+</script>
+
+</html>

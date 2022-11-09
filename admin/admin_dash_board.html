@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>UnDolt, Admin dashboard</title>
+	<link rel="stylesheet" type="text/css" href="../assert/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="admin_assert/css/admin_index.css" />
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="../js_for_table/table.css" />
+</head>
+
+<body>
+	<div class="bd-grid">
+		<div class="dashboard_all">
+			<div class="dashboard_nav" id="dashboard_nav">
+				<div class="all_nav">
+					<div class="nav_logo_div">
+						<div>
+							<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+						</div>
+						<div class="nav__toggle" id="nav-toggle">
+							<i class="bx bx-menu" id="nav_toggle_set"></i>
+						</div>
+					</div>
+					<div class="nav_rest" id="nav_rest">
+						<div class="up_nav" id="up_nav">
+							<div class="up_nav_link" onclick="active_home();">
+								<i class="bx bx-home"></i><a>Approval</a>
+							</div>
+							<div class="up_nav_link" onclick="search_admin();">
+								<i class="bx bx-user-circle"></i><a>Search</a>
+							</div>
+							<div class="up_nav_link" onclick="unblock_admin();">
+								<i class="bx bx-task"></i><a>Unblock</a>
+							</div>
+						</div>
+						<div class="below_nav" id="low_nav">
+							<div class="log_out_btn" onclick="log_out_fn();">
+								<i class="bx bx-log-out-circle"></i> Log Out
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dashboard_content">
+				<div class="stud_sub_con admin_home" id="admin_home">
+					<div>
+						<!--this is for home details-->
+						<h2> New  Manager</h2>
+						<div class="container">
+							<table id="table_id_1">
+								<thead>
+									<tr>
+										<th>Manager Id</th>
+										<th>Contact</th>
+										<th>details</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AS1234</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td><button>Details</button></td>
+									</tr>
+									    <td>AP1400</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+									    <td><button>Details</button></td>
+									</tr>
+									<tr>
+										<td>AS2345</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td><button>Details</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br>
+					<div>
+						<h2>New Tutor</h2>
+						<div class="container">
+							<table id="table_id_2">
+								<thead>
+									<tr>
+										<th>Tutor Id</th>
+										<th>Name</th>
+										<th>Contact</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>Abhijit Gayen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:919898989898">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+919898989898
+														</span>
+													</div>
+												</a>
+												<a href="mailto: abhijitgayen@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															abhijitgayen@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div class="tutor_table_btn">
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>
+													</div>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>AB1934</td>
+										<td>Rahul Sen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>Rahul Dey</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136780
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahuldaye345@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahuldaye345@gmail.com
+															</spanclass=>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+													</form>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="stud_sub_con  search_all" id="serach_all_id" hidden>
+					<div>
+						<!--this is for home details-->
+						<h3>Students</h3>
+						<div class="container">
+							<table id="table_id_3">
+								<thead>
+									<tr>
+										<th>Student Id</th>
+										<th>Contact</th>
+										<th>Subject</th>
+										<th>details</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AS1234</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+									</tr>
+									    <td>AP1400</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+									    <td>Physics</td>
+									    <td><button>Details</button></td>
+									</tr>
+									<tr>
+										<td>AS2345</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br/>
+					<br/>
+					<div>
+						<!--this is for home details-->
+						<h3>Tasks</h3>
+						<div class="container">
+							<table id="table_id_5">
+								<thead>
+									<tr>
+										<th>Task Id</th>
+										<th>Student Id</th>
+										<th>Subject</th>
+										<th>details</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>AS1234</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+									</tr>
+									    <td>AB1934</td>
+									    <td>1400</td>
+									    <td>Physics</td>
+									    <td><button>Details</button></td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>AS2345</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div>
+						<!--this is for home details-->
+						<h3> Tutors</h3>
+						<div class="container">
+							<table id="table_id_4">
+								<thead>
+									<tr>
+										<th>Tutor Id</th>
+										<th>Name</th>
+										<th>Contact</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>Abhijit Gayen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:919898989898">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+919898989898
+														</span>
+													</div>
+												</a>
+												<a href="mailto: abhijitgayen@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															abhijitgayen@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div class="tutor_table_btn">
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>
+													</div>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>AB1934</td>
+										<td>Rahul Sen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>Rahul Dey</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136780
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahuldaye345@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahuldaye345@gmail.com
+															</spanclass=>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+													</form>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div>
+						<!--this is for home details-->
+						<h3>Manegers</h3>
+						<div class="container">
+							<table id="table_id_6">
+								<thead>
+									<tr>
+										<th>Manager Id</th>
+										<th>Contact</th>
+										<th>details</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>AS1234</td>
+										<td><button>Details</button></td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>AS2345</td>
+										<td><button>Details</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="stud_sub_con block_all" id="block_all" hidden>
+					<div>
+						<!--this is for home details-->
+						<h3>Students</h3>
+						<div class="container">
+							<table id="table_id_7">
+								<thead>
+									<tr>
+										<th>Student Id</th>
+										<th>Contact</th>
+										<th>Subject</th>
+										<th>details</th>
+										<th>Access</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AS1234</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									    <td>AP1400</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+									    <td>Physics</td>
+									    <td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									<tr>
+										<td>AS2345</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br/>
+					<br/>
+					<div>
+						<!--this is for home details-->
+						<h3>Tasks</h3>
+						<div class="container">
+							<table id="table_id_8">
+								<thead>
+									<tr>
+										<th>Task Id</th>
+										<th>Student Id</th>
+										<th>Subject</th>
+										<th>details</th>
+										<th>Access</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>AS1234</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									    <td>AB1934</td>
+									    <td>1400</td>
+									    <td>Physics</td>
+									    <td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>AS2345</td>
+										<td>Maths</td>
+										<td><button>Details</button></td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div>
+						<!--this is for home details-->
+						<h3> Tutors</h3>
+						<div class="container">
+							<table id="table_id_9">
+								<thead>
+									<tr>
+										<th>Tutor Id</th>
+										<th>Name</th>
+										<th>Contact</th>
+										<th>Action</th>
+										<th>Access</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>Abhijit Gayen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:919898989898">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+919898989898
+														</span>
+													</div>
+												</a>
+												<a href="mailto: abhijitgayen@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															abhijitgayen@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div class="tutor_table_btn">
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>
+													</div>
+												</form>
+											</div>
+										</td>
+										<td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									<tr>
+										<td>AB1934</td>
+										<td>Rahul Sen</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136740
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahulsen546@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahulsen546@gmail.com
+														</span>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+												</form>
+											</div>
+										</td>
+									    <td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>Rahul Dey</td>
+										<td>
+											<div class="contact">
+												<a href="tel:917044136740">
+													<div class='tooltip'>
+														<i class='bx bxs-phone-call'></i>
+														<span class="tooltip-text">
+															+917044136780
+														</span>
+													</div>
+												</a>
+												<a href="mailto:rahuldaye345@gmail.com">
+													<div class="tooltip">
+														<i class='bx bxs-envelope'></i>
+														<span class="tooltip-text">
+															rahuldaye345@gmail.com
+															</spanclass=>
+													</div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div>
+												<form class="subject_input">
+													<div>
+														<input type="text"
+														value=" maths, Physics, chemistry, CS, Data Sci." />
+													</div>
+													<div>
+														<button type="submit" class="add_tutor">Approve</button>
+														<button type="reset" class="cancel_tutor">Reject</button>	
+													</div>
+													</form>
+											</div>
+										</td>
+									    <td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div>
+						<!--this is for home details-->
+						<h3>Manegers</h3>
+						<div class="container">
+							<table id="table_id_10">
+								<thead>
+									<tr>
+										<th>Manager Id</th>
+										<th>Contact</th>
+										<th>details</th>
+										<th>Access</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AB1234</td>
+										<td>AS1234</td>
+										<td><button>Details</button></td>
+									    <td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+									<tr>
+										<td>AB0234</td>
+										<td>AS2345</td>
+										<td><button>Details</button></td>
+									    <td><button>Block</button><button>UnBlock</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- script for <table></table> -->
+<script type="text/javascript" charset="utf8" src="../js_for_table/jQuery.js"></script>
+<script type="text/javascript" charset="utf8" src="../js_for_table/jQuery_dataTable.js"></script>
+<script>
+	$(function () {
+		$("#table_id_1").dataTable();
+		$("#table_id_2").dataTable();
+		$("#table_id_3").dataTable();
+		$("#table_id_4").dataTable();
+		$("#table_id_5").dataTable();
+		$("#table_id_6").dataTable();
+		$("#table_id_7").dataTable();
+		$("#table_id_8").dataTable();
+		$("#table_id_9").dataTable();
+		$("#table_id_10").dataTable();
+
+	});
+</script>
+
+<!-- script for others -->
+<script type="text/javascript">
+	let for_home = document.getElementById("admin_home");
+	let for_profile = document.getElementById("serach_all_id");
+	let for_your_tasks = document.getElementById("block_all");
+	function search_admin() {
+		for_home.style.display = "none";
+		for_profile.style.display = "block";
+		for_your_tasks.style.display = "none";
+	}
+
+	function unblock_admin() {
+		for_home.style.display = "none";
+		for_profile.style.display = "none";
+		for_your_tasks.style.display = "block";
+	}
+	function active_home() {
+		for_home.style.display = "block";
+		for_profile.style.display = "none";
+		for_your_tasks.style.display = "none";
+	}
+	function other_sub(elem) {
+		console.log(elem.selectedIndex);
+		if (elem.selectedIndex == 6) {
+			document.getElementById("div_other").style.display = "block";
+			document.getElementById("sub_name").style.display = "none";
+		} else {
+			document.getElementById("div_other").style.display = "none";
+		}
+	}
+	//handing the nav bar
+	const showMenu = (toggleId, navId) => {
+		const toggle = document.getElementById(toggleId),
+			nav = document.getElementById(navId);
+		if (toggle && nav) {
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("show");
+			});
+		}
+	};
+	showMenu("nav-toggle", "nav_rest");
+	/*===== ACTIVE AND REMOVE MENU =====*/
+	const navLink = document.querySelectorAll(".up_nav_link");
+
+	function linkAction() {
+		/*Remove menu mobile*/
+		const navMenu = document.getElementById("nav_rest");
+		navMenu.classList.remove("show");
+	}
+	navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+	function log_out_fn() {
+		window.location.href = "../log_in.html";
+	}
+</script>
+
+</html>
